@@ -1,0 +1,11 @@
+ntp
+firmware-iwlwifi
+wireless-tools
+wpasupplicant
+iw
+hdparm
+acpitool
+smartmontools
+firmware-iwlwifi
+hdapsd
+network-manager-openvpn-gnome

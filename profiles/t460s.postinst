@@ -1,0 +1,15 @@
+#!/bin/sh
+
+echo "tp_smapi" >> /etc/modules
+echo "hdaps" >> /etc/modules
+update-initramfs -u
+
+# If you have this warning: "gpg: WARNING: The GNOME keyring manager hijacked
+# the GnuPG agent"
+dpkg-divert --local --rename --divert /etc/xdg/autostart/gnome-keyring-gpg.desktop-disable --add /etc/xdg/autostart/gnome-keyring-gpg.desktop
+
+dpkg-divert --local --rename --divert /etc/xdg/autostart/gnome-keyring-ssh.desktop-disable --add /etc/xdg/autostart/gnome-keyring-ssh.desktop
+
+# if you want to re-enable it
+#sudo dpkg-divert --rename --remove /etc/xdg/autostart/gnome-keyring-gpg.desktop
+#sudo dpkg-divert --rename --remove /etc/xdg/autostart/gnome-keyring-ssh.desktop
