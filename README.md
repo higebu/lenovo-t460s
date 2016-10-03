@@ -24,15 +24,20 @@ Copy generated `.iso` file to your usb media device `/dev/sdX`:
 
 Configure your BIOS like this:
 
-* Reset UEFI PKI and set into "Platform Custom Setup" mode.
+* Restart -> Load Setup Defaults
 
-* Secure Boot [Enabled]
+* Config -> USB -> USB UEFI BIOS Support [Enabled]
 
-* Boot Mode [UEFI]
+* Security -> Secure Boot -> Secure Boot [Enabled]
 
-* Fast Boot [Enabled]
+* Security -> Secure Boot -> Reset to Setup Mode -> [Enter]
 
-* Usb Boot [Enabled]
+This changes Platform Mode to `Setup Mode` and Secure Boot Mode to
+`Custom Mode.
+
+### Optional
+
+* Config -> Keyboard/Mouse -> F1-F12 as Primary Function [Enabled]
 
 ## 5. Install from media
 
