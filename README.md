@@ -82,7 +82,9 @@ Wifi works only with an newer kernel:
 
 ## 6. Display
 
-	apt-get -t testing xserver-xorg-video-intel
+* xserver-xorg-video-intel (>=2:2.99.917+git201607)
+
+	apt-get -t jessie-backports xserver-xorg-video-intel
 
 ## Links
 
