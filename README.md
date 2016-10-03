@@ -1,10 +1,10 @@
-# Installing Lenovo t460s
+# Installing Debian 8.6 on Lenovo Thinkpad t460s
 
-## 1. Update UEFI BIOS (still) on Windows
+## 1. On Windows: Update UEFI BIOS
 
-1. Download BIOS from [here.](https://filedownload.lenovo.com/supportdata/product.html?id=Laptops-and-netbooks/ThinkPad-T-Series-laptops/ThinkPad-T460s)
+1. Download latest UEFI BIOS from [here.](https://filedownload.lenovo.com/supportdata/product.html?id=Laptops-and-netbooks/ThinkPad-T-Series-laptops/ThinkPad-T460s)
 
-## 2. Build Debian CD for Lenovo Thinkpad t460s
+## 2. Build debian netinst CD form this repo
 
 	apt-get update
 	apt-get install -y simple-cdd git
@@ -15,19 +15,46 @@
 
 ## 3. Install .iso to usb media
 
+Copy generatet `.iso` to your usb media `/dev/sdX`:
+
 	dd if=images/debian-8.6-amd64-CD-1.iso of=/dev/sdX bs=1M
 	sync
 
-And install Debian from usb media.
+And install debian from usb media.
 
-## 4. Configure apt repos
+## 4. Prepare UEFI BIOS
 
-Add jessie-backports and testing repo:
+Configure your BIOS like this:
 
-	cat << EOF >/etc/apt/sources.list.d/testing.list
+* Reset UEFI PKI and set into "Platform Custom Setup" mode.
+
+* Secure Boot [Enabled]
+
+* Boot Mode [UEFI]
+
+* Fast Boot [Enabled]
+
+* Usb Boot [Enabled]
+
+
+## 5. Install from media
+
+Insert your usb media and boot your t460s with F12 option to select your
+media. **Note**: Not all usb media's (I use a SanDisk) are recognised.
+
+## 6. Configure apt repo's
+
+Add jessie-backports repo:
+
+	cat << EOF >/etc/apt/sources.list.d/jessie-backports.list
 	# jessie-backports
 	deb http://ftp.ch.debian.org/debian/ jessie-backports main contrib
 	deb-src http://ftp.ch.debian.org/debian/ jessie-backports main contrib
+	EOF
+
+Add testing repo:
+
+	cat << EOF >/etc/apt/sources.list.d/testing.list
 	# testing
 	deb http://ftp.ch.debian.org/debian testing main contrib non-free
 	deb-src http://ftp.ch.debian.org/debian testing main contrib non-free
@@ -35,14 +62,12 @@ Add jessie-backports and testing repo:
 
 	apt-get update
 
-
-## 5. Wifi and kernel
+## 7. Wifi and kernel
 
 Wifi works only with an newer kernel:
 
 	apt-get -t jessie-backports install linux-image-4.7.0-0.bpo.1-amd64-unsigned
 	apt-get -t testing install firmware-iwlwifi
-
 
 ## 6. Display
 
@@ -51,7 +76,11 @@ Wifi works only with an newer kernel:
 ## Links
 
 * [LVM recipe hints](https://wikitech.wikimedia.org/wiki/PartMan)
+
 * [LVM recipe hints #2](https://wiki.hiit.fi/pages/viewpage.action?pageId=34767211)
-* [Preseed files](https://wiki.debian.org/DebianInstaller/Preseed)
-* [Preseed details](https://www.debian.org/releases/stable/amd64/apb.html)
+
+* [wiki.debian.org: Preseed files](https://wiki.debian.org/DebianInstaller/Preseed)
+
+* [Debian GNU/Linux – Installationsanleitung: Anhang B. Automatisieren der Installation mittels Voreinstellung](https://www.debian.org/releases/stable/amd64/apb.html)
+
 * [gist lvm hint](https://gist.github.com/lorin/5140029)
