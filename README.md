@@ -51,11 +51,9 @@ from the USB media: **!!! ALL EXISTING DATA ON THE DRIVE WILL BE LOST !!!**
 Insert your usb media and boot your t460s with F12 option to select your
 media. **Note**: Not all usb media's (I use a SanDisk) are recognised.
 
-## 6. The magic: t460s.postinst file
+## 6. The magic: What is necessary to get run t460s
 
-Check out what's necessary to get run your t460s: [Here it is.](https://github.com/micressor/lenovo-t460s/blob/master/profiles/t460s.postinst)
-
-Summarized:
+In a nutshell (or check out [t460s.postinst](https://github.com/micressor/lenovo-t460s/blob/master/profiles/t460s.postinst) file):
 
 * firmware-iwlwifi (>=20160824-1) from testing
 * linux-image-amd64 (>=linux-image-4.7.0-0.bpo.a.amd64) from jessie-backports
