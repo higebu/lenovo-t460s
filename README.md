@@ -35,6 +35,10 @@ Configure your BIOS like this:
 This changes Platform Mode to `Setup Mode` and Secure Boot Mode to
 `Custom Mode`.
 
+To get HDMI Port working:
+
+* Config -> Display -> Boot Display [Display on dock]
+
 ### Optional
 
 * Config -> Keyboard/Mouse -> F1-F12 as Primary Function [Enabled]
