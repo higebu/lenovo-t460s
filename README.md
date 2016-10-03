@@ -62,11 +62,20 @@ Add testing repo:
 	deb-src http://ftp.ch.debian.org/debian testing main contrib non-free
 	EOF
 
+	cat << EOF >/etc/apt/preferences.d/pinning
+	Package: *
+	Pin: release o=Debian,a=testing
+	Pin-Priority: -500
+	EOF
+
 	apt-get update
 
 ## 7. Wifi and kernel
 
 Wifi works only with an newer kernel:
+
+* firmware-iwlwifi (>=20160824-1) from testing
+* linux-image-amd64 (>=linux-image-4.7.0-0.bpo.a.amd64) from jessie-backports
 
 	apt-get -t jessie-backports install linux-image-4.7.0-0.bpo.1-amd64-unsigned
 	apt-get -t testing install firmware-iwlwifi
