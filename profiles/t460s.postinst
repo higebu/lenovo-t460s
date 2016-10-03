@@ -36,4 +36,4 @@ apt-get -y -t testing install firmware-iwlwifi
 
 # xserver-xorg-video-intel (>=2:2.99.917+git201607)
 # The display works only with an newer jessie-backports driver:
-apt-get -y -t jessie-backports xserver-xorg-video-intel
+apt-get -y -t jessie-backports install xserver-xorg-video-intel
