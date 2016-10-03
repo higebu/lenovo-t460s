@@ -15,12 +15,10 @@
 
 ## 3. Install .iso to usb media
 
-Copy generatet `.iso` to your usb media `/dev/sdX`:
+Copy generated `.iso` file to your usb media device `/dev/sdX`:
 
 	dd if=images/debian-8.6-amd64-CD-1.iso of=/dev/sdX bs=1M
 	sync
-
-And install debian from usb media.
 
 ## 4. Prepare UEFI BIOS
 
@@ -35,7 +33,6 @@ Configure your BIOS like this:
 * Fast Boot [Enabled]
 
 * Usb Boot [Enabled]
-
 
 ## 5. Install from media
 
@@ -75,12 +72,14 @@ Wifi works only with an newer kernel:
 
 ## Links
 
-* [LVM recipe hints](https://wikitech.wikimedia.org/wiki/PartMan)
+* This document is inspired by [DebianOn -> t460s](https://wiki.debian.org/InstallingDebianOn/Thinkpad/T460s/stretch).
 
-* [LVM recipe hints #2](https://wiki.hiit.fi/pages/viewpage.action?pageId=34767211)
+* [partman-auto/expert_recipe findings](https://wikitech.wikimedia.org/wiki/PartMan)
+
+* [Debian GNU/Linux 8.4 (Jessie) dynamic LVM logical volumes without boot partition with partman expert recipe](https://wiki.hiit.fi/pages/viewpage.action?pageId=34767211)
 
 * [wiki.debian.org: Preseed files](https://wiki.debian.org/DebianInstaller/Preseed)
 
 * [Debian GNU/Linux – Installationsanleitung: Anhang B. Automatisieren der Installation mittels Voreinstellung](https://www.debian.org/releases/stable/amd64/apb.html)
 
-* [gist lvm hint](https://gist.github.com/lorin/5140029)
+* [Automated partitioning with Ubuntu preseed](https://gist.github.com/lorin/5140029)
