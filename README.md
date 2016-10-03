@@ -51,53 +51,15 @@ from the USB media: **!!! ALL EXISTING DATA ON THE DRIVE WILL BE LOST !!!**
 Insert your usb media and boot your t460s with F12 option to select your
 media. **Note**: Not all usb media's (I use a SanDisk) are recognised.
 
-## 6. Configure apt repo's
+## 6. The magic: t460s.postinst file
 
-Add jessie-backports repo:
+Check out what's necessary to get run your t460s: [Here it is.](https://github.com/micressor/lenovo-t460s/blob/master/profiles/t460s.postinst)
 
-	cat << EOF >/etc/apt/sources.list.d/jessie-backports.list
-	# jessie-backports
-	deb http://ftp.ch.debian.org/debian/ jessie-backports main contrib
-	deb-src http://ftp.ch.debian.org/debian/ jessie-backports main contrib
-	EOF
-
-Add testing repo:
-
-	cat << EOF >/etc/apt/sources.list.d/testing.list
-	# testing
-	deb http://ftp.ch.debian.org/debian testing main contrib non-free
-	deb-src http://ftp.ch.debian.org/debian testing main contrib non-free
-	EOF
-
-	cat << EOF >/etc/apt/preferences.d/pinning
-	Package: *
-	Pin: release o=Debian,a=testing
-	Pin-Priority: -500
-	EOF
-
-	apt-get update
-
-## 7. Wifi and kernel
+Summarized:
 
 * firmware-iwlwifi (>=20160824-1) from testing
 * linux-image-amd64 (>=linux-image-4.7.0-0.bpo.a.amd64) from jessie-backports
-
-Wifi works only with an newer kernel:
-
-	apt-get -t jessie-backports install linux-image-4.7.0-0.bpo.1-amd64-unsigned
-	apt-get -t testing install firmware-iwlwifi
-
-## 6. Display
-
 * xserver-xorg-video-intel (>=2:2.99.917+git201607)
-
-The display works only with an newer jessie-backports driver:
-
-	apt-get -t jessie-backports xserver-xorg-video-intel
-
-## 7. Reboot
-
-And enjoy!
 
 ## Links
 
