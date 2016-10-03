@@ -51,7 +51,7 @@ from the USB media: **!!! ALL EXISTING DATA ON THE DRIVE WILL BE LOST !!!**
 Insert your usb media and boot your t460s with F12 option to select your
 media. **Note**: Not all usb media's (I use a SanDisk) are recognised.
 
-## 6. The magic: What is necessary to get run t460s
+## The magic: What is necessary to get run t460s
 
 In a nutshell (or check out [t460s.postinst](https://github.com/micressor/lenovo-t460s/blob/master/profiles/t460s.postinst) file):
 
