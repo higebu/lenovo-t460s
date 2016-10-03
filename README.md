@@ -33,7 +33,7 @@ Configure your BIOS like this:
 * Security -> Secure Boot -> Reset to Setup Mode -> [Enter]
 
 This changes Platform Mode to `Setup Mode` and Secure Boot Mode to
-`Custom Mode.
+`Custom Mode`.
 
 ### Optional
 
