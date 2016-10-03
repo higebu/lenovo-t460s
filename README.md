@@ -84,6 +84,8 @@ Wifi works only with an newer kernel:
 
 * xserver-xorg-video-intel (>=2:2.99.917+git201607)
 
+The display works only with an newer jessie-backports driver:
+
 	apt-get -t jessie-backports xserver-xorg-video-intel
 
 ## Links
