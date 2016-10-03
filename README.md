@@ -45,6 +45,9 @@ To get HDMI Port working:
 
 ## 5. Install from media
 
+**WARNING:** this is an almost fully automated installation. Once you boot
+from the USB media: **!!! ALL EXISTING DATA ON THE DRIVE WILL BE LOST !!!**
+
 Insert your usb media and boot your t460s with F12 option to select your
 media. **Note**: Not all usb media's (I use a SanDisk) are recognised.
 
