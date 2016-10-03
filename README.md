@@ -88,6 +88,10 @@ The display works only with an newer jessie-backports driver:
 
 	apt-get -t jessie-backports xserver-xorg-video-intel
 
+## 7. Reboot
+
+And enjoy!
+
 ## Links
 
 * This document is inspired by [DebianOn -> t460s](https://wiki.debian.org/InstallingDebianOn/Thinkpad/T460s/stretch).
