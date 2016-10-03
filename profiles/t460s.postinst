@@ -4,12 +4,36 @@ echo "tp_smapi" >> /etc/modules
 echo "hdaps" >> /etc/modules
 update-initramfs -u
 
-# If you have this warning: "gpg: WARNING: The GNOME keyring manager hijacked
-# the GnuPG agent"
-dpkg-divert --local --rename --divert /etc/xdg/autostart/gnome-keyring-gpg.desktop-disable --add /etc/xdg/autostart/gnome-keyring-gpg.desktop
+# Add jessie-backports repo:
+cat << EOF >/etc/apt/sources.list.d/jessie-backports.list
+# jessie-backports
+deb http://ftp.ch.debian.org/debian/ jessie-backports main contrib
+deb-src http://ftp.ch.debian.org/debian/ jessie-backports main contrib
+EOF
 
-dpkg-divert --local --rename --divert /etc/xdg/autostart/gnome-keyring-ssh.desktop-disable --add /etc/xdg/autostart/gnome-keyring-ssh.desktop
+# Add testing repo:
+cat << EOF >/etc/apt/sources.list.d/testing.list
+# testing
+deb http://ftp.ch.debian.org/debian testing main contrib non-free
+deb-src http://ftp.ch.debian.org/debian testing main contrib non-free
+EOF
 
-# if you want to re-enable it
-#sudo dpkg-divert --rename --remove /etc/xdg/autostart/gnome-keyring-gpg.desktop
-#sudo dpkg-divert --rename --remove /etc/xdg/autostart/gnome-keyring-ssh.desktop
+# Add pinning:
+cat << EOF >/etc/apt/preferences.d/pinning
+Package: *
+Pin: release o=Debian,a=testing
+Pin-Priority: -500
+EOF
+
+apt-get update
+
+# firmware-iwlwifi (>=20160824-1) from testing
+# linux-image-amd64 (>=linux-image-4.7.0-0.bpo.a.amd64) from jessie-backports
+#
+# Wifi works only with an newer kernel:
+apt-get -y -t jessie-backports install linux-image-amd64
+apt-get -y -t testing install firmware-iwlwifi
+
+# xserver-xorg-video-intel (>=2:2.99.917+git201607)
+# The display works only with an newer jessie-backports driver:
+apt-get -y -t jessie-backports xserver-xorg-video-intel
