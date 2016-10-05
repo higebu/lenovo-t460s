@@ -13,10 +13,6 @@ This repo generates a NetInst `.iso` for a thinkpad t460s.
 **WARNING:** this is an almost fully automated installation. Once you boot
 from the USB media: **!!! ALL EXISTING DATA ON THE DRIVE WILL BE LOST !!!**
 
-## Requirements
-
-* Internet access on eth0
-
 ## 1. On Windows: Update UEFI BIOS
 
 1. Download latest UEFI BIOS from [here.](https://filedownload.lenovo.com/supportdata/product.html?id=Laptops-and-netbooks/ThinkPad-T-Series-laptops/ThinkPad-T460s)
