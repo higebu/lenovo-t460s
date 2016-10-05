@@ -1,5 +1,7 @@
 # Installing Debian 8.6 on Lenovo Thinkpad t460s
 
+## Overall Status
+
 This repo generates a NetInst `.iso` for a thinkpad t460s.
 
 1. For installation: Access to internet via eth0 interface is needed.
@@ -12,6 +14,20 @@ This repo generates a NetInst `.iso` for a thinkpad t460s.
 
 **WARNING:** this is an almost fully automated installation. Once you boot
 from the USB media: **!!! ALL EXISTING DATA ON THE DRIVE WILL BE LOST !!!**
+
+Tested with Debian 8.6 (jessie)
+
+### Core Components
+
+* Boot Standard Kernel:	4.7
+* LAN network card: OK
+* Hibernation: (?)
+* Sleep / Suspend: (?)
+* Switch to External Screen: OK
+* Built-in (Trackpoint): OK
+* Built-in (Touchpad): OK
+* Wireless/Wifi: OK
+* Keyboard's Hotkeys: OK
 
 ## 1. On Windows: Update UEFI BIOS
 
