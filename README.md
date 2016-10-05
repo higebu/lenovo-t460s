@@ -15,7 +15,8 @@ from the USB media: **!!! ALL EXISTING DATA ON THE DRIVE WILL BE LOST !!!**
 
 ## 1. On Windows: Update UEFI BIOS
 
-1. Download latest UEFI BIOS from [here.](https://filedownload.lenovo.com/supportdata/product.html?id=Laptops-and-netbooks/ThinkPad-T-Series-laptops/ThinkPad-T460s)
+1. The easiest way to update UEFI BIOS, do it on windows. Download and flash
+the latest from [here.](https://filedownload.lenovo.com/supportdata/product.html?id=Laptops-and-netbooks/ThinkPad-T-Series-laptops/ThinkPad-T460s)
 
 ## 2. Build debian netinst CD form this repo
 
