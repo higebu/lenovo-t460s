@@ -1,5 +1,19 @@
 # Installing Debian 8.6 on Lenovo Thinkpad t460s
 
+This repo generates a NetInst `.iso` for a thinkpad t460s.
+
+1. For installation: Access to internet via eth0 interface is needed.
+2. It creates a user `debian` with password `insecure`
+3. User `root`has no password. Access to root via `sudo su -`
+4. It creates an encrypted LVM partitioning with
+	* /boot type ext4 size 250 MiB
+	* / type ext4`size 10 GiB
+	* /home type btrfs size rest of space
+
+## Requirements
+
+* Internet access on eth0
+
 ## 1. On Windows: Update UEFI BIOS
 
 1. Download latest UEFI BIOS from [here.](https://filedownload.lenovo.com/supportdata/product.html?id=Laptops-and-netbooks/ThinkPad-T-Series-laptops/ThinkPad-T460s)
