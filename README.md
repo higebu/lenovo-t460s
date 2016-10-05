@@ -10,6 +10,9 @@ This repo generates a NetInst `.iso` for a thinkpad t460s.
 	* / type ext4`size 10 GiB
 	* /home type btrfs size rest of space
 
+**WARNING:** this is an almost fully automated installation. Once you boot
+from the USB media: **!!! ALL EXISTING DATA ON THE DRIVE WILL BE LOST !!!**
+
 ## Requirements
 
 * Internet access on eth0
