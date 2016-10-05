@@ -84,16 +84,9 @@ and  [pull requests](https://github.com/micressor/lenovo-t460s/pulls).
 ## Links
 
 * This document is inspired by [DebianOn -> t460s](https://wiki.debian.org/InstallingDebianOn/Thinkpad/T460s/stretch).
-
 * [partman-auto/expert_recipe findings](https://wikitech.wikimedia.org/wiki/PartMan)
-
-* [Debian GNU/Linux 8.4 (Jessie) dynamic LVM logical volumes without boot partition with partman expert recipe](https://wiki.hiit.fi/pages/viewpage.action?pageId=34767211)
-
 * [wiki.debian.org: Preseed files](https://wiki.debian.org/DebianInstaller/Preseed)
-
 * [Debian GNU/Linux – Installationsanleitung: Anhang B. Automatisieren der Installation mittels Voreinstellung](https://www.debian.org/releases/stable/amd64/apb.html)
-
-* [Automated partitioning with Ubuntu preseed](https://gist.github.com/lorin/5140029)
 
 # License
 
