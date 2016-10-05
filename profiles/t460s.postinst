@@ -1,9 +1,5 @@
 #!/bin/sh
 
-echo "tp_smapi" >> /etc/modules
-echo "hdaps" >> /etc/modules
-update-initramfs -u
-
 # Add jessie-backports repo:
 cat << EOF >/etc/apt/sources.list.d/jessie-backports.list
 # jessie-backports
