@@ -89,3 +89,7 @@ In a nutshell (or check out [t460s.postinst](https://github.com/micressor/lenovo
 * [Debian GNU/Linux – Installationsanleitung: Anhang B. Automatisieren der Installation mittels Voreinstellung](https://www.debian.org/releases/stable/amd64/apb.html)
 
 * [Automated partitioning with Ubuntu preseed](https://gist.github.com/lorin/5140029)
+
+# License
+
+lenovo-t460s is free software, available under the [GNU General Public License, Version 3](http://www.gnu.org/licenses/gpl.html).
