@@ -76,6 +76,11 @@ In a nutshell (or check out [t460s.postinst](https://github.com/micressor/lenovo
 * linux-image-amd64 (>=linux-image-4.7.0-0.bpo.a.amd64) from jessie-backports
 * xserver-xorg-video-intel (>=2:2.99.917+git201607)
 
+# Contributing
+
+Feel free to create [issues](https://github.com/micressor/lenovo-t460s/issues)
+and  [pull requests](https://github.com/micressor/lenovo-t460s/pulls).
+
 ## Links
 
 * This document is inspired by [DebianOn -> t460s](https://wiki.debian.org/InstallingDebianOn/Thinkpad/T460s/stretch).
