@@ -7,6 +7,6 @@ hdparm
 acpitool
 smartmontools
 firmware-iwlwifi
-hdapsd
 network-manager-openvpn-gnome
 sudo
+btrfs-tools
