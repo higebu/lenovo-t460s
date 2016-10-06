@@ -39,3 +39,6 @@ apt-get -y -t jessie-backports install xserver-xorg-video-intel
 # Because of kernel error message:
 # i915 0000:00:02.0: firmware: failed to load i915/skl_dmc_ver1.bin (-2)
 apt-get -y -t testing install firmware-misc-nonfree
+
+# tlp - Advanced Power Management for ThinkPads
+apt-get -y -t jessie-backports install tlp

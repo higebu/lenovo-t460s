@@ -10,3 +10,4 @@ firmware-iwlwifi
 network-manager-openvpn-gnome
 sudo
 btrfs-tools
+acpi-call-dkms
