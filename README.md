@@ -18,7 +18,10 @@ you create the `.iso`.
 **WARNING:** this is an almost fully automated installation. Once you boot
 from the USB media: **!!! ALL EXISTING DATA ON THE DRIVE WILL BE LOST !!!**
 
-Tested with Debian 8.6 (jessie)
+*Last successful test was tag [0.1](https://github.com/micressor/lenovo-t460s/tree/0.1) with debian 8.6 (jessie).*
+
+Have you successful tested a later version of this repo?
+Open a issue and let me know. Thanks. :-)
 
 ### Core Components
 
