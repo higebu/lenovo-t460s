@@ -2,7 +2,7 @@
 
 ## Overall Status
 
-This repo generates a NetInst `.iso` for a thinkpad t460s.
+This repo generates a debian NetInst `.iso` file for t460s.
 
 1. For installation: Access to internet via eth0 interface is needed.
 2. It creates a user `debian` with password `insecure`
