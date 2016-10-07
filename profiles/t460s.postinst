@@ -21,6 +21,14 @@ Pin: release o=Debian,a=testing
 Pin-Priority: -500
 EOF
 
+# SSD fs TRIM for /boot and /. BTRFS (/home) has an other way.
+cat << EOF >/etc/cron.weekly/fstrim
+#!/bin/bash
+fstrim -v /
+fstrim -v /boot
+EOF
+chmod +x /etc/cron.weekly/fstrim
+
 apt-get update
 
 # firmware-iwlwifi (>=20160824-1) from testing
