@@ -43,7 +43,7 @@ the latest from [here.](https://filedownload.lenovo.com/supportdata/product.html
 ## 2. Build debian netinst CD form this repo
 
 	apt-get update
-	apt-get install -y simple-cdd git
+	apt-get install -y simple-cdd git xorriso
 	mkdir ~/src
 	git clone https://github.com/micressor/lenovo-t460s.git
 	cd lenovo-t460s
@@ -95,6 +95,11 @@ In a nutshell (or check out [t460s.postinst](https://github.com/micressor/lenovo
 * firmware-misc-nonfree (>=20160824-1) from testing
 * linux-image-amd64 (>=linux-image-4.7.0-0.bpo.a.amd64) from jessie-backports
 * xserver-xorg-video-intel (>=2:2.99.917+git201607) from jessie-backports
+
+# Binary releases
+
+64-bit installer ISO images are available at GitHub in Releases section:
+https://github.com/micressor/releases/releases
 
 # Contributing
 
