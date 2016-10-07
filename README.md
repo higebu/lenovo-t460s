@@ -99,7 +99,7 @@ In a nutshell (or check out [t460s.postinst](https://github.com/micressor/lenovo
 # Binary releases
 
 64-bit installer ISO images are available at GitHub in Releases section:
-https://github.com/micressor/releases/releases
+https://github.com/micressor/lenovo-t460s/releases
 
 # Contributing
 
