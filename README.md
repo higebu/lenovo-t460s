@@ -27,13 +27,17 @@ Open a issue and let me know. Thanks. :-)
 
 * Boot Standard Kernel:	4.7
 * LAN network card: OK
-* Hibernation: (?)
-* Sleep / Suspend: (?)
+* Hibernation: OK with `acpitool -s`
+* Sleep / Suspend: OK with `acpitool -S`
 * Switch to External Screen: OK
 * Built-in (Trackpoint): OK
 * Built-in (Touchpad): OK
 * Wireless/Wifi: OK
 * Keyboard's Hotkeys: OK
+
+## Known issues
+
+* Sleep / Suspend doesn't work on lid close -> [Kernel Bug Tracker](https://bugzilla.kernel.org/buglist.cgi?content=t460s&no_redirect=1&order=Importance&query_format=specific)
 
 ## 1. On Windows: Update UEFI BIOS
 
