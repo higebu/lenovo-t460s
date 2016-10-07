@@ -101,6 +101,14 @@ In a nutshell (or check out [t460s.postinst](https://github.com/micressor/lenovo
 64-bit installer ISO images are available at GitHub in Releases section:
 https://github.com/micressor/lenovo-t460s/releases
 
+## Errata to the binary release
+
+1. [Enable TRIM on encrypted disk](https://wiki.ubuntuusers.de/SSD/TRIM/#TRIM-mit-Festplattenverschluesselung)
+
+2. Verify that ssd mountoption on btrfs filesystem at /home is set:
+
+	mount -t btrfs | grep ssd
+
 # Contributing
 
 Feel free to create [issues](https://github.com/micressor/lenovo-t460s/issues)
@@ -112,6 +120,9 @@ and  [pull requests](https://github.com/micressor/lenovo-t460s/pulls).
 * [partman-auto/expert_recipe findings](https://wikitech.wikimedia.org/wiki/PartMan)
 * [wiki.debian.org: Preseed files](https://wiki.debian.org/DebianInstaller/Preseed)
 * [Debian GNU/Linux – Installationsanleitung: Anhang B. Automatisieren der Installation mittels Voreinstellung](https://www.debian.org/releases/stable/amd64/apb.html)
+* [ubuntuusers -> TRIM](https://wiki.ubuntuusers.de/SSD/TRIM/)
+* [ubuntuusers -> BTRFS-Mountoptionen](https://wiki.ubuntuusers.de/Btrfs-Mountoptionen/)
+* [ubuntuusers -> TRIM mit Festplattenverschlüsselung](https://wiki.ubuntuusers.de/SSD/TRIM/#TRIM-mit-Festplattenverschluesselung)
 
 # License
 
